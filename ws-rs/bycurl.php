@@ -8,7 +8,7 @@ $headers = array(
     );
 
 $ch      = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'http://antrean.klinik-annisaa.local/ws-rs/mimomf/httpreq.php');
+curl_setopt($ch, CURLOPT_URL, 'https://antrean.klinik-annisaa.com/token/');
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_TIMEOUT, 60);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
