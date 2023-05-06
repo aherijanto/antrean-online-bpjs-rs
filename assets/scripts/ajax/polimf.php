@@ -11,13 +11,6 @@
         $url = 'https://apijkn-dev.bpjs-kesehatan.go.id/antreanrs_dev/ref/poli';          	
         $poli = new Encoded($url);//
         $poli->setInit();
-    
-        //  echo '<br/>Cons-ID :'.$diagnose->getConsid();
-        //  echo '<br/>Timestamp : '.$diagnose->getTStamp();
-        //  echo '<br/>Signature : '.$diagnose->getEncodedSignature();
-        //  echo '<br/>UserKey : '.$diagnose->getUserkey();
-        //  echo '<br/>'.getcwd();
-        //  echo '<br/>'.$_SERVER['DOCUMENT_ROOT'];
         if($poli->populateResponse()!=null){
             $resp = json_decode($poli->populateResponse(),true);
             $no=0;            
