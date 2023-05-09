@@ -16,6 +16,8 @@ session_start();
 <?php
 require_once('../assets/requires/config.php');
 require_once('../assets/requires/headerdshbd.php');
+require_once('topmenu.php');
+$date = date('m/d/Y h:i:s a', time());
 ?>
 
 <body>
@@ -163,7 +165,7 @@ require_once('../assets/requires/headerdshbd.php');
                     <div class="input-group-prepend">
                         <span class="input-group-text bg-primary text-white" id="basic-addon3">Estimasi Dilayani</span>
                     </div>
-                    <input type="text" class="form-control" id="estimasidilayani" aria-describedby="basic-addon3">
+                    <input type="text" class="form-control" id="estimasidilayani" aria-describedby="basic-addon3" value="<?php echo strtotime($date)*1000;?>" readonly >
                 </div>
 
                 <div class="input-group mb-3">

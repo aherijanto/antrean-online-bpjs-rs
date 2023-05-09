@@ -17,8 +17,10 @@
 <?php
     require_once('../assets/requires/config.php');
     require_once('../assets/requires/headerdshbd.php');
+    require_once('topmenu.php');
+    $date = date('m/d/Y h:i:s a', time());
 ?>
-
+ANN202305090001
 <body>
     <div class="row">
         <div class="col-sm-6">
@@ -42,13 +44,9 @@
                     </div>
                     <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="taskid">
                         <option value=" " selected>Please Choose..</option>
-                        <option value="1">1. Mulai Waktu Tunggu Admisi</option>
-                        <option value="2">2. Akhir Waktu Tunggu Admisi / Mulai Waktu Layan Admisi</option>
-                        <option value="3">3. Akhir Waktu Layan Admisi / Mulai Waktu Tunggu Poli</option>
-                        <option value="4">4. Akhir Waktu Tunggu Poli / Mulai Waktu Layan Poli</option>
-                        <option value="5">5. Akhir Waktu Layan Poli / Mulai Waktu Tunggu Farmasi</option>
-                        <option value="6">6. Akhir Waktu Tunggu Farmasi / Mulai Waktu Layan Obat</option>
-                        <option value="7">7. Akhir Waktu Obat Selesai Dibuat</option>
+                        <option value="5">1. Akhir Waktu Tunggu Poli / Mulai Waktu Tunggu Farmasi</option>
+                        <option value="6">2. Akhir Waktu Tunggu Farmasi / Mulai Waktu Layan Obat</option>
+                        <option value="7">3. Akhir Waktu Obat Selesai Dibuat</option>
                         <option value="99">99. Tidak Hadir / BATAL</option>
                     </select>
                 </div>
@@ -57,7 +55,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text bg-primary text-white" id="basic-addon3">Waktu</span>
                     </div>
-                    <input type="text" class="form-control" id="waktu" aria-describedby="basic-addon3">
+                    <input type="text" class="form-control" id="waktu" aria-describedby="basic-addon3" value="<?php echo strtotime($date)*1000; ?>" readonly>
                 </div>
 
                 <div class="input-group mb-3">

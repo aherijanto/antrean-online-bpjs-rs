@@ -26,7 +26,7 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="card ml-4 p-3">
-                <div style="padding-top:40px;color:#7209b7;font-size:32px;">UPDATE ANTREAN  ADMISI</div>
+                <div style="padding-top:40px;color:#7209b7;font-size:32px;">UPDATE ANTREAN POLI</div>
                 
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
@@ -45,9 +45,8 @@
                     </div>
                     <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="taskid">
                         <option value=" " selected>Please Choose..</option>
-                        <option value="1">1. Mulai Waktu Tunggu Admisi</option>
-                        <option value="2">2. Akhir Waktu Tunggu Admisi / Mulai Waktu Layan Admisi</option>
-                        <option value="3">3. Akhir Waktu Layan Admisi / Mulai Waktu Tunggu Poli</option>
+                        <option value="4">1. Akhir Waktu Tunggu Poli / Mulai Waktu Layan Poli</option>
+                        <option value="5">2. Akhir Waktu Layan Poli / Mulai Waktu Tunggu Farmasi</option>
                         <option value="99">99. Tidak Hadir / BATAL</option>
                     </select>
                 </div>
@@ -82,4 +81,4 @@
 </body>
 
 </html>
-<script src="../assets/scripts/js/updateantreanadmisi.js"></script>
+<script src="../assets/scripts/js/updateantreanpoli.js"></script>

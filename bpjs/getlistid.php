@@ -16,11 +16,11 @@ session_start();
 <?php
 require_once('../assets/requires/config.php');
 require_once('../assets/requires/headerdshbd.php');
+require_once('topmenu.php');
 ?>
 
 <body>
-    <div class="row">
-        <div class="col-sm-6">
+   
             <div class="card ml-4 p-3">
                 <div style="padding-top:40px;color:#7209b7;font-size:32px;">GET LIST ID</div>
                 
@@ -31,9 +31,6 @@ require_once('../assets/requires/headerdshbd.php');
                     <input type="text" class="form-control" id="kodebooking" aria-describedby="basic-addon3">
                 </div>
 
-                
-               
-
                 <div>
                     <div class="row justify-content-center">
                         <div class="col"></div>
@@ -43,17 +40,7 @@ require_once('../assets/requires/headerdshbd.php');
                 </div>
                 <div class="mt-4" id="tabeldetail"></div>
             </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Search Detail</h5>
-                    <div id="tablesearch"></div>
-                </div>
-            
-            </div>
-        </div>
-    </div>
+        
 </body>
 
 </html>

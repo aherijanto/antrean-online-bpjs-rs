@@ -216,6 +216,7 @@ Class Encoded{
     }
     
     
+    
     function postJSON($postdata){
         $headers = array(
             'X-Cons-ID:'.$this->getConsid().'',
@@ -247,7 +248,8 @@ Class Encoded{
             
             $response = curl_exec($curl);
             curl_close($curl);
-            echo $response;
+            //echo 'response from encoded'.$response;
+            return $response;
     }
 
     function send_mail($codeDiag){
