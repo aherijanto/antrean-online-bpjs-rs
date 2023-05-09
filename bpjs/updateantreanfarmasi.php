@@ -20,7 +20,7 @@
     require_once('topmenu.php');
     $date = date('m/d/Y h:i:s a', time());
 ?>
-ANN202305090001
+
 <body>
     <div class="row">
         <div class="col-sm-6">
