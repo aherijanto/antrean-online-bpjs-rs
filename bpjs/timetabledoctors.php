@@ -12,7 +12,7 @@ require_once('../assets/requires/headerdshbd.php');
 require_once('topmenu.php');
 ?>
 
-<body class="container">
+<body>
     <div style="padding-top:40px;color:#7209b7;font-size:32px;">REFERENSI JADWAL DOKTER BPJS</div>
     
     <div class="input-group mb-3">

@@ -7,11 +7,12 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <?php
-require_once('../assets/requires/config.php');
-require_once('../assets/requires/headerdshbd.php');
+    require_once('../assets/requires/config.php');
+    require_once('../assets/requires/headerdshbd.php');
+    require_once('topmenu.php');
 ?>
 
-<body class="container">
+<body>
     <div style="padding-top:40px;color:#7209b7;font-size:32px;">REFERENSI DOKTER BPJS</div>
     
     <div class="input-group mb-3">
