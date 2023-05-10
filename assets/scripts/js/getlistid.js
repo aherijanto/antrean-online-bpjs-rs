@@ -10,8 +10,8 @@ $(document).ready(function () {
         $("#btngetlist").click(function(){
             var kodebooking1 = $("#kodebookinglist").val();
             //check logging
-            console.log(kodebooking1);
-          $.ajax({
+           console.log(kodebooking1);
+            $.ajax({
                 type: "POST",
                 url: "../assets/scripts/ajax/getlistid.php",
                 data: "kodebooking=" +  kodebooking1,

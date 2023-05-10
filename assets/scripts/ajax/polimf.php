@@ -14,12 +14,22 @@
         if($poli->populateResponse()!=null){
             $resp = json_decode($poli->populateResponse(),true);
             //var_dump($resp);
-            
+            $no=0;
             $kodepoli = $_POST['kodepoli'];
 
             $result = array();
             $resultarray=array();
-        
+            
+            $table = "<table class='table table-hover no-cellpadding w-auto small'>
+                                    <thead>
+                                    <th>NO</th>
+                                        <th>KODE POLI</th>
+                                        <th>NAMA POLI</th>
+                                        <th>KODE KODE SUBSPESIALIS</th>
+                                        <th>NAMA NAMA SUBSPESIALIS</th>
+                                       
+                                    </thead>";
+                $table.="<tbody>";
             foreach ($resp as $item) {
                 if ($item['kdpoli'] === strtoupper($kodepoli)) {
                         $result = array('kodepoli'=>$item['kdpoli'],'namapoli'=>$item['nmpoli'],'kdsubspesialis'=>$item['kdsubspesialis'],'nmsubspesialis'=>$item['nmsubspesialis']); 

@@ -10,9 +10,8 @@ ini_set("display_errors","On");
 	if($_POST){
         // /SEP/1.1/insert
 			$kodebooking = $_POST['kodebooking'];
-					$getlistid = new GETLISTID();
-                    $getlistid->set_KODEBOOKING($kodebooking);
-			
+			$getlistid = new GETLISTID();
+			$getlistid->set_KODEBOOKING($kodebooking);
 			$resultJSON = $getlistid->convertJSON();
 			//echo $resultJSON;
 			$url = "https://apijkn-dev.bpjs-kesehatan.go.id/antreanrs_dev/antrean/getlisttask";
@@ -24,7 +23,7 @@ ini_set("display_errors","On");
 			if($sendANTREAN->populateResponse()!=null){
 				$resultdecode = json_decode($sendANTREAN->populateResponse(),true);
 				$no=0;            
-					$table = "<table class='table'>
+					$table = "<table class='table w-auto small table-hover no-cellpadding'>
 										<thead>
 										<th>NO</th>
 											<th>KODE BOOKING</th>
