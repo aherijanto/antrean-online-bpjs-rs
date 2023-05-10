@@ -6,19 +6,19 @@ Date        : May 4, 2023
 
 //main
 $(document).ready(function () {
-         $("#tabeldetail").hide();
+        $("#tabeldetailpoli").hide();
         $("#btnpoli").click(function(){
-            var kode = $("#kodepoli").val();
-            console.log(kode);
+            var kodepoli = $("#kodepoliref").val();
+            console.log(kodepoli);
           $.ajax({
                 type: "POST",
                 url: "../assets/scripts/ajax/polimf.php",
-                data: "kode="+ kode,
+                data: "kodepoli="+ kodepoli,
                 success: function (response) {
                     console.log(response);
-                    $("#tabeldetail").html("");
-                    $("#tabeldetail").html(response);
-                    $("#tabeldetail").show();
+                    $("#tabeldetailpoli").html("");
+                    $("#tabeldetailpoli").html(response);
+                    $("#tabeldetailpoli").show();
                 }
             });
         })
@@ -32,9 +32,9 @@ $(document).ready(function () {
                 
                 success: function (response) {
                     console.log(response);
-                    $("#tabeldetail").html("");
-                    $("#tabeldetail").html(response);
-                    $("#tabeldetail").show();
+                    $("#tabeldetailpoli").html("");
+                    $("#tabeldetailpoli").html(response);
+                    $("#tabeldetailpoli").show();
                 }
             });
         })

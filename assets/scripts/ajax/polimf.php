@@ -7,29 +7,32 @@
    
 	include  $_SERVER['DOCUMENT_ROOT'].'/assets/scripts/ajax/encoded.php';
     
-	if($_POST['kode']){
+	if($_POST['kodepoli']){
         $url = 'https://apijkn-dev.bpjs-kesehatan.go.id/antreanrs_dev/ref/poli';          	
         $poli = new Encoded($url);//
         $poli->setInit();
         if($poli->populateResponse()!=null){
             $resp = json_decode($poli->populateResponse(),true);
-            $no=0;            
-                $table = "<table class='table'>
-                                    <thead>
-                                    <th>NO</th>
-                                        <th>NAMA POLI</th>
-                                        <th>SUBSPESIALIS</th>
-                                        <th>KODE SUBSPESIALIS</th>
-                                        <th>KODE POLI</th>
-                                    </thead>";
-                $table.="<tbody>";
-                                    foreach($resp as $diag){
+            //var_dump($resp);
+            
+            $kodepoli = $_POST['kodepoli'];
+
+            $result = array();
+            $resultarray=array();
+        
+            foreach ($resp as $item) {
+                if ($item['kdpoli'] === strtoupper($kodepoli)) {
+                        $result = array('kodepoli'=>$item['kdpoli'],'namapoli'=>$item['nmpoli'],'kdsubspesialis'=>$item['kdsubspesialis'],'nmsubspesialis'=>$item['nmsubspesialis']); 
+                        array_push($resultarray,$result);
+                    }                      
+            }        
+                                    foreach($resultarray as $diag){
                                     $table.="<tr>
                                                             <td>".++$no."</td>
-                                                            <td>". $diag['nmpoli']."</td>
+                                                            <td>".$diag['namapoli']."</td>
                                                             <td>".$diag['nmsubspesialis']."</td>
                                                             <td>".$diag['kdsubspesialis']."</td>
-                                                            <td>".$diag['kdpoli']."</td>
+                                                            <td>".$diag['kodepoli']."</td>
                                                         <tr>";
                                     }
                 $table.="</tr>

@@ -19,7 +19,7 @@ require_once('../assets/requires/headerdshbd.php');
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon3">Masukan Kode/Nama POLI</span>
         </div>
-        <input type="text" class="form-control" id="kodepoli" aria-describedby="basic-addon3">
+        <input type="text" class="form-control" id="kodepoliref" aria-describedby="basic-addon3">
     </div>
    
 
@@ -31,7 +31,7 @@ require_once('../assets/requires/headerdshbd.php');
             <div class="col-4"></div>
         </div>
     </div>
-    <div class="mt-4" id="tabeldetail"></div>
+    <div class="mt-4" id="tabeldetailpoli"></div>
     
 </body>
 

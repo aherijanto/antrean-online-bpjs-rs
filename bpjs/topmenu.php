@@ -1,11 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Annisaa - Dev</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="topmenu1">
+  <a class="navbar-brand" href="index.php">Annisaa - Dev</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-        <a class="nav-item nav-link" href="doctors.php">Referensi Dokter </a>
         <a class="nav-item nav-link" href="timetabledoctors.php">Jadwal Dokter </a>
         <a class="nav-item nav-link" href="insertantrean.php">Tambah Antrean </a>
         <a class="nav-item nav-link" href="insertantreanfarmasi.php">Tambah Antrean Farmasi </a>

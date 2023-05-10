@@ -6,6 +6,19 @@ Date        : MAY 4,2023
 
 //main
 $(document).ready(function () {
+    $("#nik").click(function(){
+        $('#tablesearch').load('http://vclaim.klinik-annisaa.local/peserta/index.php');
+       // $('#tablesearch').children('topmenu1').css('visibility','hidden');
+    });
+
+    $('#kodepoli').click(function(){
+        $('#tablesearch').load('poli.php');
+    })
+
+    $('#kodedokter').click(function(){
+        $('#tablesearch').load('doctors.php');
+    })
+    
          
         $("#btninsert").click(function(){
             var kodebooking = $("#kodebooking").val();

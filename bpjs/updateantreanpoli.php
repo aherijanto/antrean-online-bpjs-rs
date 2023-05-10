@@ -72,7 +72,11 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Search Detail</h5>
-                    <div id="tablesearch"></div>
+                    <div id="tablesearch">
+                    <div id="tablesearch">
+                        <?php require_once('getlistid.php');?>
+                    </div>
+                    </div>
                 </div>
             
             </div>

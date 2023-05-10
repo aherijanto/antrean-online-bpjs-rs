@@ -21,7 +21,7 @@
 
     <body>
         <div class="text-center" style="margin-top:15%;">
-            <h2> WS BPJS - ANNISAA DEV    
+            <h2 class="text-success"> WS BPJS - ANNISAA DEV    
         </div>   
     </body>
 </html>

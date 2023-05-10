@@ -9,7 +9,7 @@ session_start();
 <?php
     require_once('../assets/requires/config.php');
     require_once('../assets/requires/headerdshbd.php');
-    require_once('topmenu.php');
+   
 ?>
 
 <body>
@@ -20,7 +20,7 @@ session_start();
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon3">Masukan Kode/Nama Dokter</span>
         </div>
-        <input type="text" class="form-control" id="kodedokter" aria-describedby="basic-addon3">
+        <input type="text" class="form-control" id="kodedokterref" aria-describedby="basic-addon3">
     </div>
    
 
@@ -32,7 +32,7 @@ session_start();
             <div class="col-4"></div>
         </div>
     </div>
-    <div class="mt-4" id="tabeldetail"></div>
+    <div class="mt-4" id="tabeldetaildoctors"></div>
     
 </body>
 

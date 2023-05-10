@@ -6,19 +6,19 @@ Date        : May 4, 2023
 
 //main
 $(document).ready(function () {
-         $("#tabeldetail").hide();
+         $("#tabeldetaildoctors").hide();
         $("#btndokter").click(function(){
-            var kode = $("#kodedokter").val();
-            console.log(kode);
+            var kodedokter = $("#kodedokterref").val();
+            console.log(kodedokter);
           $.ajax({
                 type: "POST",
                 url: "../assets/scripts/ajax/doktermf.php",
-                data: "kode="+ kode,
+                data: "kode="+ kodedokter,
                 success: function (response) {
                     console.log(response);
-                    $("#tabeldetail").html("");
-                    $("#tabeldetail").html(response);
-                    $("#tabeldetail").show();
+                    $("#tabeldetaildoctors").html("");
+                    $("#tabeldetaildoctors").html(response);
+                    $("#tabeldetaildoctors").show();
                 }
             });
         })
@@ -32,9 +32,9 @@ $(document).ready(function () {
                 
                 success: function (response) {
                     console.log(response);
-                    $("#tabeldetail").html("");
-                    $("#tabeldetail").html(response);
-                    $("#tabeldetail").show();
+                    $("#tabeldetaildoctors").html("");
+                    $("#tabeldetaildoctors").html(response);
+                    $("#tabeldetaildoctors").show();
                 }
             });
         })

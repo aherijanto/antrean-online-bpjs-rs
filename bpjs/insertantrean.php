@@ -13,12 +13,12 @@ session_start();
         }
         </style>
 </head>
-<?php
-require_once('../assets/requires/config.php');
-require_once('../assets/requires/headerdshbd.php');
-require_once('topmenu.php');
-$date = date('m/d/Y h:i:s a', time());
-?>
+    <?php
+        require_once('../assets/requires/config.php');
+        require_once('../assets/requires/headerdshbd.php');
+        require_once('topmenu.php');
+        $date = date('m/d/Y h:i:s a', time());
+    ?>
 
 <body>
     <div class="row">
@@ -217,7 +217,9 @@ $date = date('m/d/Y h:i:s a', time());
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Search Detail</h5>
-                    <div id="tablesearch"></div>
+                    <div id="tablesearch">
+
+                    </div>
                 </div>
             
             </div>

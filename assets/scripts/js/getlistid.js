@@ -6,23 +6,20 @@ Date        : MAY 4,2023
 
 //main
 $(document).ready(function () {
-         
-        $("#btninsert").click(function(){
-            var kodebooking = $("#kodebooking").val();
-            
+   
+        $("#btngetlist").click(function(){
+            var kodebooking1 = $("#kodebookinglist").val();
             //check logging
-            console.log(kodebooking);
-            
-            
+            console.log(kodebooking1);
           $.ajax({
                 type: "POST",
                 url: "../assets/scripts/ajax/getlistid.php",
-                data: "kodebooking=" +  kodebooking,
-                success: function (response) {
-                    console.log(response);
-                    $("#tabeldetail").html("");
-                    $("#tabeldetail").html(response);
-                    $("#tabeldetail").show();
+                data: "kodebooking=" +  kodebooking1,
+                success: function (response1) {
+                    console.log(response1);
+                    $("#tabelgetlist").html("");
+                    $("#tabelgetlist").html(response1);
+                    $("#tabelgetlist").show();
                 }
             });
         })
