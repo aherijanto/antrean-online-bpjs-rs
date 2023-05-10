@@ -217,7 +217,7 @@ session_start();
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Search Detail</h5>
-                    <div id="tablesearch">
+                    <div id="tablesearch"  class="table-responsive">
 
                     </div>
                 </div>

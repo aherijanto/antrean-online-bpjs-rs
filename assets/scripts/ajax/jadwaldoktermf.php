@@ -7,25 +7,25 @@
    
 	include  $_SERVER['DOCUMENT_ROOT'].'/assets/scripts/ajax/encoded.php';
     
-	if($_POST['kode']){
-        $kodepoli = $_POST['kode'];
-        $tanggal = $_POST['tanggal'];
+	if($_POST['kodepoli']){
+        $kodepoli = $_POST['kodepoli'];
+        $tanggal = $_POST['tanggalpoli'];
         $url = 'https://apijkn-dev.bpjs-kesehatan.go.id/antreanrs_dev/jadwaldokter/kodepoli/'.$kodepoli.'/tanggal/'.$tanggal;    
         ///jadwaldokter/kodepoli/{Parameter1}/tanggal/{Parameter2}   
-        var_dump($url);   	
+           	
         $jadwal = new Encoded($url);//
         $jadwal->setInit();
     
-         echo '<br/>Cons-ID :'.$jadwal->getConsid();
-         echo '<br/>Timestamp : '.$jadwal->getTStamp();
-         echo '<br/>Signature : '.$jadwal->getEncodedSignature();
-         echo '<br/>UserKey : '.$jadwal->getUserkey();
-         echo '<br/>'.getcwd();
-         echo '<br/>'.$_SERVER['DOCUMENT_ROOT'];
+        //  echo '<br/>Cons-ID :'.$jadwal->getConsid();
+        //  echo '<br/>Timestamp : '.$jadwal->getTStamp();
+        //  echo '<br/>Signature : '.$jadwal->getEncodedSignature();
+        //  echo '<br/>UserKey : '.$jadwal->getUserkey();
+        //  echo '<br/>'.getcwd();
+        //  echo '<br/>'.$_SERVER['DOCUMENT_ROOT'];
         if($jadwal->populateResponse()!=null){
             $resp = json_decode($jadwal->populateResponse(),true);
             $no=0;            
-                $table = "<table class='table'>
+                $table = "<table class='table table-hover no-cellpadding w-auto small'>
                                     <thead>
                                     <th>NO</th>
                                         <th>KODE DOKTER</th>
@@ -46,7 +46,7 @@
                                                             <td>".$jdwl['namadokter']."</td>
                                                             <td>".$jdwl['kodepoli']."</td>
                                                             <td>".$jdwl['namapoli']."</td>
-                                                            <td>".$jdwl['namadokter']."</td>
+                                                            
                                                             <td>".$jdwl['kodesubspesialis']."</td>
                                                             <td>".$jdwl['namasubspesialis']."</td>
                                                             <td>".$jdwl['namahari']."</td>

@@ -13,7 +13,7 @@ $(document).ready(function () {
           $.ajax({
                 type: "POST",
                 url: "../assets/scripts/ajax/doktermf.php",
-                data: "kode="+ kodedokter,
+                data: "kodedokter="+ kodedokter,
                 success: function (response) {
                     console.log(response);
                     $("#tabeldetaildoctors").html("");

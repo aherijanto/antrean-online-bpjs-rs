@@ -6,11 +6,10 @@ session_start();
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<?php
-require_once('../assets/requires/config.php');
-require_once('../assets/requires/headerdshbd.php');
-require_once('topmenu.php');
-?>
+    <?php
+        require_once('../assets/requires/config.php');
+        require_once('../assets/requires/headerdshbd.php');
+    ?>
 
 <body>
     <div style="padding-top:40px;color:#7209b7;font-size:32px;">REFERENSI JADWAL DOKTER BPJS</div>
@@ -20,11 +19,14 @@ require_once('topmenu.php');
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon3">Masukan Kode Poli</span>
         </div>
-        <input type="text" class="form-control" id="kodepoli" aria-describedby="basic-addon3">
+        <input type="text" class="form-control" id="kodepoliref" aria-describedby="basic-addon3">
+        
+    </div>
+    <div class="input-group mb-3">
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon3">Masukan Tanggal</span>
         </div>
-        <input type="date" class="form-control" id="tanggal" aria-describedby="basic-addon3">
+        <input type="date" class="form-control" id="tanggalref" aria-describedby="basic-addon3">
     </div>
    
 
@@ -36,7 +38,7 @@ require_once('topmenu.php');
             <div class="col-4"></div>
         </div>
     </div>
-    <div class="mt-4" id="tabeldetail"></div>
+    <div class="mt-4" id="tabeldetailjadwal"></div>
     
 </body>
 

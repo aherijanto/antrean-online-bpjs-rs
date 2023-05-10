@@ -6,20 +6,20 @@ Date        : May 4, 2023
 
 //main
 $(document).ready(function () {
-         $("#tabeldetail").hide();
+        $("#tabeldetailjadwal").hide();
         $("#btnjadwal").click(function(){
-            var kodepoli = $("#kodepoli").val();
-            var tanggal = $('#tanggal').val();
+            var kodepoli = $("#kodepoliref").val();
+            var tanggal = $('#tanggalref').val();
             console.log(kodepoli + ' '+tanggal);
           $.ajax({
                 type: "POST",
                 url: "../assets/scripts/ajax/jadwaldoktermf.php",
-                data: "kode="+ kodepoli+"&tanggal="+tanggal,
+                data: "kodepoli="+ kodepoli+"&tanggalpoli="+tanggal,
                 success: function (response) {
                     console.log(response);
-                    $("#tabeldetail").html("");
-                    $("#tabeldetail").html(response);
-                    $("#tabeldetail").show();
+                    $("#tabeldetailjadwal").html("");
+                    $("#tabeldetailjadwal").html(response);
+                    $("#tabeldetailjadwal").show();
                 }
             });
         })
@@ -33,9 +33,9 @@ $(document).ready(function () {
                 
                 success: function (response) {
                     console.log(response);
-                    $("#tabeldetail").html("");
-                    $("#tabeldetail").html(response);
-                    $("#tabeldetail").show();
+                    $("#tabeldetailjadwal").html("");
+                    $("#tabeldetailjadwal").html(response);
+                    $("#tabeldetailjadwal").show();
                 }
             });
         })

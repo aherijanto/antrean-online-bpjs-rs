@@ -16,7 +16,7 @@ $(document).ready(function () {
     })
 
     $('#kodedokter').click(function(){
-        $('#tablesearch').load('doctors.php');
+        $('#tablesearch').load('timetabledoctors.php');
     })
     
          

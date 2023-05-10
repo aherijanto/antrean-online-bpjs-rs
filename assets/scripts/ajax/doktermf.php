@@ -7,20 +7,25 @@
    
 	include  $_SERVER['DOCUMENT_ROOT'].'/assets/scripts/ajax/encoded.php';
     
-	if($_POST['kode']){
+	if($_POST['kodedokter']){
         $url = 'https://apijkn-dev.bpjs-kesehatan.go.id/antreanrs_dev/ref/dokter';    
         ///jadwaldokter/kodepoli/{Parameter1}/tanggal/{Parameter2}      	
         $dokter = new Encoded($url);//
         $dokter->setInit();
     
-        //  echo '<br/>Cons-ID :'.$diagnose->getConsid();
-        //  echo '<br/>Timestamp : '.$diagnose->getTStamp();
-        //  echo '<br/>Signature : '.$diagnose->getEncodedSignature();
-        //  echo '<br/>UserKey : '.$diagnose->getUserkey();
-        //  echo '<br/>'.getcwd();
-        //  echo '<br/>'.$_SERVER['DOCUMENT_ROOT'];
         if($dokter->populateResponse()!=null){
             $resp = json_decode($dokter->populateResponse(),true);
+            $kodedokter = $_POST['kodedokter'];
+            $result = array();
+            $resultarray=array();
+        
+            foreach ($resp as $item) {
+                if ($item['kodedokter'] === (int)$kodedokter) {
+                        $result = array('kodedokter'=>$item['kodedokter'],'namadokter'=>$item['namadokter']); 
+                        array_push($resultarray,$result);
+                    }                      
+            }        
+
             $no=0;            
                 $table = "<table class='table'>
                                     <thead>
@@ -30,13 +35,13 @@
                                         
                                     </thead>";
                 $table.="<tbody>";
-                                    foreach($resp as $dktr){
-                                    $table.="<tr>
-                                                            <td>".++$no."</td>
-                                                            <td>". $dktr['kodedokter']."</td>
-                                                            <td>".$dktr['namadokter']."</td>
-                                                        <tr>";
-                                    }
+                        foreach($resultarray as $dktr){
+                        $table.="<tr>
+                                                <td>".++$no."</td>
+                                                <td>". $dktr['kodedokter']."</td>
+                                                <td>".$dktr['namadokter']."</td>
+                                            <tr>";
+                        }
                 $table.="</tr>
                                 </tbody>";
                 $table.="</table>";
@@ -44,8 +49,5 @@
         }else{
             echo 'Data Not Found...';
         }
-
-    }
-        
-		
+    }	
 ?>
