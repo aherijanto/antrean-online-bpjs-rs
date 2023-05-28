@@ -6,7 +6,14 @@ Date        : MAY 4,2023
 
 //main
 $(document).ready(function () {
+    var flas='new';
+    $("#tanggalperiksa").val(new Date().toISOString().split('T')[0]);
+
     $("#nik").click(function(){
+        $('#tablesearch').load('http://vclaim.klinik-annisaa.local/peserta/index.php');
+       // $('#tablesearch').children('topmenu1').css('visibility','hidden');
+    });
+    $("#nik").focus(function(){
         $('#tablesearch').load('http://vclaim.klinik-annisaa.local/peserta/index.php');
        // $('#tablesearch').children('topmenu1').css('visibility','hidden');
     });
@@ -15,6 +22,13 @@ $(document).ready(function () {
         $('#tablesearch').load('poli.php');
     })
 
+    $('#kodepoli').focus(function(){
+        $('#tablesearch').load('poli.php');
+    })
+
+    $('#kodedokter').focus(function(){
+        $('#tablesearch').load('timetabledoctors.php');
+    })
     $('#kodedokter').click(function(){
         $('#tablesearch').load('timetabledoctors.php');
     })

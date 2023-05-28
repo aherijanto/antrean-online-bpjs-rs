@@ -22,8 +22,8 @@ session_start();
 
 <body>
     <div class="row">
-        <div class="col-sm-6">
-            <div class="card ml-4 p-3">
+        <div class="col">
+            <div class="card card-stats ml-4 mt-2 mb-3 p-3">
                 <div style="padding-top:40px;color:#7209b7;font-size:32px;">INSERT ANTREAN</div>
                 
                 <div class="input-group mb-3">
@@ -101,7 +101,7 @@ session_start();
                     <div class="input-group-prepend">
                         <span class="input-group-text bg-primary text-white" id="basic-addon3">Tanggal Periksa</span>
                     </div>
-                    <input type="date" class="form-control" id="tanggalperiksa" aria-describedby="basic-addon3">
+                    <input type="date" class="form-control" id="tanggalperiksa" aria-describedby="basic-addon3" readonly>
                 </div>
 
                 <div class="input-group mb-3">
@@ -213,8 +213,8 @@ session_start();
                 <div class="mt-4" id="tabeldetail"></div>
             </div>
         </div>
-        <div class="col-sm-6">
-            <div class="card">
+        <div class="col-sm-6 ">
+            <div class="card mt-2 mb-3 p-3 mr-3 border-primary">
                 <div class="card-body">
                     <h5 class="card-title">Search Detail</h5>
                     <div id="tablesearch"  class="table-responsive">

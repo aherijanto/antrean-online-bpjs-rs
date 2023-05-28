@@ -5,7 +5,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-        <a class="nav-item nav-link" href="timetabledoctors.php">Jadwal Dokter </a>
+        <!-- <a class="nav-item nav-link" href="timetabledoctors.php">Jadwal Dokter </a> -->
         <a class="nav-item nav-link" href="insertantrean.php">Tambah Antrean </a>
         <a class="nav-item nav-link" href="insertantreanfarmasi.php">Tambah Antrean Farmasi </a>
         <a class="nav-item nav-link" href="updateantreanadmisi.php">Update Admisi</a>

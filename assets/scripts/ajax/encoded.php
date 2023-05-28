@@ -170,9 +170,9 @@ Class Encoded{
 // Computes the signature by hashing the salt with the secret key as the key
       $signature= hash_hmac('sha256',$this->consid.'&'.$this->tStamp,$this->secretKey, true);
       $this->encodedSignature = base64_encode($signature);
-      // echo PHP_EOL;
-      // echo $this->getTStamp(),PHP_EOL;
-      // echo $this->getEncodedSignature();
+      echo PHP_EOL;
+      echo $this->getTStamp(),PHP_EOL;
+      echo $this->getEncodedSignature();
     }
         
      function setInit(){
@@ -216,8 +216,7 @@ Class Encoded{
         return null;
     }
     
-    
-    
+   
     function postJSON($postdata){
         $headers = array(
             'X-Cons-ID:'.$this->getConsid().'',
