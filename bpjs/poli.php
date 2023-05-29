@@ -14,7 +14,7 @@ require_once('../assets/requires/headerdshbd.php');
 <body class="container">
     <div style="padding-top:40px;color:#7209b7;font-size:32px;">REFERENSI POLI BPJS</div>
     
-    <div class="input-group mb-3">
+    <!-- <div class="input-group mb-3">
   
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon3">Masukan Kode/Nama POLI</span>
@@ -30,7 +30,7 @@ require_once('../assets/requires/headerdshbd.php');
             <div class="col-4"></div>
             <div class="col-4"></div>
         </div>
-    </div>
+    </div> -->
     <div class="mt-4" id="tabeldetailpoli"></div>
     
 </body>

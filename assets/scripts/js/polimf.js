@@ -7,13 +7,13 @@ Date        : May 4, 2023
 //main
 $(document).ready(function () {
         $("#tabeldetailpoli").hide();
-        $("#btnpoli").click(function(){
-            var kodepoli = $("#kodepoliref").val();
-            console.log(kodepoli);
+        // $("#btnpoli").click(function(){
+            // var kodepoli = $("#kodepoliref").val();
+            // console.log(kodepoli);
           $.ajax({
                 type: "POST",
                 url: "../assets/scripts/ajax/polimf.php",
-                data: "kodepoli="+ kodepoli,
+                data: "",
                 success: function (response) {
                     console.log(response);
                     $("#tabeldetailpoli").html("");
@@ -21,14 +21,14 @@ $(document).ready(function () {
                     $("#tabeldetailpoli").show();
                 }
             });
-        })
+        // })
 
         $("#btnnama").click(function(){
             var nama = $("#namadiag").val();
           $.ajax({
                 type: "POST",
                 url: "../assets/scripts/ajax/diagnosa.php",
-                data: "nama="+ nama+"status=nama" ,
+                data: "nama="+ nama+"status=nama",
                 
                 success: function (response) {
                     console.log(response);

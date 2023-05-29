@@ -6,12 +6,13 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
         <!-- <a class="nav-item nav-link" href="timetabledoctors.php">Jadwal Dokter </a> -->
-        <a class="nav-item nav-link" href="insertantrean.php">Tambah Antrean </a>
-        <a class="nav-item nav-link" href="insertantreanfarmasi.php">Tambah Antrean Farmasi </a>
-        <a class="nav-item nav-link" href="updateantreanadmisi.php">Update Admisi</a>
-        <a class="nav-item nav-link" href="updateantreanpoli.php">Update Poli</a>
-        <a class="nav-item nav-link" href="updateantreanfarmasi.php">Update Farmasi</a>
+        <a class="nav-item nav-link" href="insertantrean.php" hidden>Tambah Antrean </a>
+        <a class="nav-item nav-link" href="insertantreanfarmasi.php" hidden>Tambah Antrean Farmasi </a>
+        <a class="nav-item nav-link" href="updateantreanadmisi.php" hidden>Update Admisi</a>
+        <a class="nav-item nav-link" href="updateantreanpoli.php" hidden>Update Poli</a>
+        <a class="nav-item nav-link" href="updateantreanfarmasi.php" hidden>Update Farmasi</a>
         <a class="nav-item nav-link" href="getlistid.php">Get Task</a>
+        <a class="nav-item nav-link" href="nonbpjs.php">Non BPJS</a>
     </div>
   </div>
 </nav>

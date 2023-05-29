@@ -7,7 +7,7 @@
    
 	include  $_SERVER['DOCUMENT_ROOT'].'/assets/scripts/ajax/encoded.php';
     
-	if($_POST['kodepoli']){
+	// if($_POST['kodepoli']){
         $url = 'https://apijkn-dev.bpjs-kesehatan.go.id/antreanrs_dev/ref/poli';          	
         $poli = new Encoded($url);//
         $poli->setInit();
@@ -15,8 +15,6 @@
             $resp = json_decode($poli->populateResponse(),true);
             //var_dump($resp);
             $no=0;
-            $kodepoli = $_POST['kodepoli'];
-
             $result = array();
             $resultarray=array();
             
@@ -31,10 +29,10 @@
                                     </thead>";
                 $table.="<tbody>";
             foreach ($resp as $item) {
-                if ($item['kdpoli'] === strtoupper($kodepoli)) {
+                // if ($item['kdpoli'] === strtoupper($kodepoli)) {
                         $result = array('kodepoli'=>$item['kdpoli'],'namapoli'=>$item['nmpoli'],'kdsubspesialis'=>$item['kdsubspesialis'],'nmsubspesialis'=>$item['nmsubspesialis']); 
                         array_push($resultarray,$result);
-                    }                      
+                    //}                      
             }        
                                     foreach($resultarray as $diag){
                                     $table.="<tr>
@@ -53,7 +51,7 @@
             echo 'Data Not Found...';
         }
 
-    }
+    // }
         
 		
 ?>
