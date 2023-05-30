@@ -1,5 +1,6 @@
 <?php
 session_start();
+date_default_timezone_set("Asia/Jakarta");
 ?>
 <html>
 
@@ -16,6 +17,7 @@ session_start();
         require_once('../assets/requires/headerdshbd.php');
         require_once('topmenu.php');
         $date = date('m/d/Y h:i:s a', time());
+        
     ?>
 <body>
     <div class="row">
@@ -88,7 +90,7 @@ session_start();
                     <div class="input-group-prepend">
                         <span class="input-group-text bg-primary text-white" id="basic-addon3">Pasien Baru ?</span>
                     </div>
-                    <input type="text" class="form-control" id="norm" aria-describedby="basic-addon3" id="pasienbaru" value="0" hidden>
+                    <input type="text" class="form-control" aria-describedby="basic-addon3" id="pasienbaru" value="0" hidden>
                     <!-- <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="pasienbaru">
                         <option value=" ">Please Choose..</option>
                         <option value="1">1. Ya</option>

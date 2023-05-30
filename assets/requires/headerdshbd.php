@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css">
 <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="/assets/sweetalert/sweetalert.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
 
 <!-- JQuery and Bootstrap Scripts Loading -->

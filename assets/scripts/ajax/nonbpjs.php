@@ -67,10 +67,11 @@ ini_set("display_errors","On");
                     
 
 			$resultJSON = $insertAntrean->convertJSON();
-			echo $resultJSON;
+			//echo $resultJSON;
 			$url = "https://apijkn-dev.bpjs-kesehatan.go.id/antreanrs_dev/antrean/add";
 			$sendANTREAN= new Encoded($url);
 			$sent = $sendANTREAN->postJSON($resultJSON);
+			
 			echo $sent;
 		}
 	?>

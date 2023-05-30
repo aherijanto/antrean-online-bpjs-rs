@@ -34,7 +34,7 @@
                         array_push($resultarray,$result);
                     //}                      
             }        
-                                    foreach($resultarray as $diag){
+            foreach($resultarray as $diag){
                                     $table.="<tr>
                                                             <td>".++$no."</td>
                                                             <td>".$diag['namapoli']."</td>
